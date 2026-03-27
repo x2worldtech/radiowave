@@ -5,7 +5,7 @@ import { MobileNav } from "./components/MobileNav";
 import { NavBar } from "./components/NavBar";
 import { PlayerBar } from "./components/PlayerBar";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
-import { PlayerProvider, usePlayer } from "./contexts/PlayerContext";
+import { PlayerProvider } from "./contexts/PlayerContext";
 import { FavoritesPage } from "./pages/FavoritesPage";
 import { HomePage } from "./pages/HomePage";
 import { SearchPage } from "./pages/SearchPage";
@@ -13,7 +13,6 @@ import type { Page } from "./types";
 
 function AppContent() {
   const [page, setPage] = useState<Page>("home");
-  const { currentStation } = usePlayer();
 
   const renderPage = () => {
     switch (page) {
@@ -27,16 +26,10 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="h-screen flex flex-col overflow-hidden bg-background">
       <NavBar page={page} onNavigate={setPage} />
 
-      <main
-        className={`${
-          currentStation ? "pb-[calc(56px+72px)] md:pb-[80px]" : "pb-14 md:pb-0"
-        }`}
-      >
-        {renderPage()}
-      </main>
+      <main className="flex-1 overflow-y-auto">{renderPage()}</main>
 
       <PlayerBar />
       <ExpandedPlayer />

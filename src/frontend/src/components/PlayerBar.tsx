@@ -35,7 +35,8 @@ export function PlayerBar() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 player-blur border-t border-border mb-[56px] md:mb-0"
+      className="player-blur border-t border-border flex-shrink-0"
+      style={{ paddingBottom: "max(env(safe-area-inset-bottom), 20px)" }}
       data-ocid="player.panel"
     >
       <div className="max-w-screen-xl mx-auto px-4 h-[72px] md:h-[80px] flex items-center gap-3 md:gap-6">

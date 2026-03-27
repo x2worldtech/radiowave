@@ -15,7 +15,8 @@ export function MobileNav({ page, onNavigate }: Props) {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden player-blur border-t border-border"
+      className="md:hidden player-blur border-t border-border flex-shrink-0"
+      style={{ paddingBottom: "max(env(safe-area-inset-bottom), 20px)" }}
       data-ocid="mobile.panel"
     >
       <div className="flex items-center justify-around h-14">

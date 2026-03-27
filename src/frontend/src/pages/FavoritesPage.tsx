@@ -28,7 +28,7 @@ export function FavoritesPage() {
 
   if (!identity) {
     return (
-      <div className="max-w-screen-xl mx-auto px-4 pt-24 pb-10 flex flex-col items-center justify-center min-h-[60vh] text-center">
+      <div className="max-w-screen-xl mx-auto px-4 pt-8 pb-10 flex flex-col items-center justify-center min-h-[60vh] text-center">
         <div className="w-20 h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
           <Heart className="h-9 w-9 text-primary/50" />
         </div>
@@ -57,7 +57,7 @@ export function FavoritesPage() {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 pt-24 pb-10">
+    <div className="max-w-screen-xl mx-auto px-4 pt-8 pb-10">
       <div className="flex items-center gap-3 mb-8">
         <h1 className="text-3xl font-bold text-foreground">Favorites</h1>
         {isLoaded && (

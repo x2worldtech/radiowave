@@ -18,7 +18,7 @@ export function NavBar({ page, onNavigate }: Props) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <header className="bg-background/80 backdrop-blur-xl border-b border-border/50 flex-shrink-0">
       <div className="max-w-screen-xl mx-auto px-4 h-16 flex items-center gap-6">
         {/* Logo */}
         <button
